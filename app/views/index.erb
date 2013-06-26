@@ -7,7 +7,7 @@
   <p>Short URL's</p>
   <ul>
     <% @urls.each do |url| %>
-      <li class="full-url"><a href=<%= "/" + url.short_url %>> <%= url.full_url %> </a></li>
+      <li class="full-url"> <%= url.full_url %> </li>
       <li class="short-url"> <a href=<%= "/" + url.short_url %>> <%= url.short_url %> </a></li>
       <li class="click_count"> <%= url.click_count %> </li>
     <% end %>
