@@ -1,14 +1,19 @@
+<div>
+  <a href="/signin">Sign In</a>
+  <a href="/signup">Sign Up</a>
+</div>
+
 <div class="container">
   <form action="/urls" method="post">
     <p>Full URL</p>
     <input type="text" name="full_url">
-    <input type="submit">
+    <input type="submit" value="Generate!">
   </form>
   <p>Short URL's</p>
   <ul>
     <% @urls.each do |url| %>
       <li class="full-url"> <%= url.full_url %> </li>
-      <li class="short-url"> <a href=<%= "/" + url.short_url %>> <%= url.short_url %> </a></li>
+      <li class="short-url"> <a href=<%= "/url/" + url.short_url %>> <%= url.short_url %> </a></li>
       <li class="click_count"> <%= url.click_count %> </li>
     <% end %>
   </ul>
