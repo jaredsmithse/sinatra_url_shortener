@@ -3,16 +3,16 @@
   <form action="/urls" method="post">
     <p>Full URL</p>
     <input type="text" name="full_url">
-    <input type="submit" value="Generate!">
+    <button type="submit">Generate!</button>
   </form>
   <p>Short URL's</p>
-  <ul>
-    <% @urls.each do |url| %>
-      <% if @current_user.id == url.user_id %>
-        <li class="full-url"> <%= url.full_url %> </li>
-        <li class="short-url"> <a href=<%= "/url/" + url.short_url %>> <%= url.short_url %> </a></li>
-        <li class="click_count"> <%= url.click_count %> </li>
-      <% end %>
-    <% end %>
+  <% @urls.each do |url| %>
+  <ul class="url">
+    <% if @current_user.id == url.user_id %>
+    <li class="full-url"> <%= url.full_url %> </li>
+    <li class="short-url"> <a href=<%= "/url/" + url.short_url %>> <%= url.short_url %> </a></li>
+    <li class="click-count"> <%= url.click_count %> </li>
   </ul>
+  <% end %>
+  <% end %>
 </div>

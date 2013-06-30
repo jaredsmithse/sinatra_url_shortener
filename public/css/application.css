@@ -1,9 +1,101 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 80%;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 1px solid black;
+  max-width: 600px;
 }
+
+body {
+	background: #203232;
+	color: #E8E8E8;
+}
+
 th {
   text-align: left;
 }
+
+input {
+	height: 25px;
+	border-radius: 5px;
+}
+
+button {
+	height: 25px;
+	border-radius: 5px;
+	background: #726D61;
+	border: 2px solid #726D61;
+}
+
+button:hover {
+	border: 2px solid #E8E8E8;
+}
+ul{
+	margin: 0px;
+}
+
+li {
+	float: left;
+	margin-top: 4px;
+	margin-right: 10px;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #E8E8E8;
+}
+
+a:hover {
+	color: blue;
+}
+
+#user-login-signup {
+	margin-bottom: 15px;
+	width: 90%;
+	height: 35px;
+	padding: 10px;
+}
+
+#user-login-signup form {
+	float: right;
+}
+
+#user-login-signup button {
+	margin-right: 10px;
+}
+
+.full-url {
+	display: none;
+}
+
+.short-url {
+	float: left;
+}
+
+.click-count {
+	float: right;
+}
+
+.url {
+	height: 40px;
+	width: 85%;
+	background: #726D61;
+	border-radius: 5px;
+	font-size: 1.3em;
+	border: 2px solid #726D61;
+}
+
+.url:hover {
+	border: 2px solid #E8E8E8;
+}
+
+
+
+
+
+
+
+
+
+
