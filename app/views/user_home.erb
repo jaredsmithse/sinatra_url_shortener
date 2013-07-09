@@ -7,12 +7,14 @@
   </form>
   <p>Short URL's</p>
   <% @urls.each do |url| %>
-  <ul class="url">
     <% if @current_user.id == url.user_id %>
-    <li class="full-url"> <%= url.full_url %> </li>
-    <li class="short-url"> <a href=<%= "/url/" + url.short_url %>> <%= url.short_url %> </a></li>
-    <li class="click-count"> <%= url.click_count %> </li>
-  </ul>
-  <% end %>
+      <div class="url">
+        <ul>
+        <li class="full-url"> <%= url.full_url %> </li>
+        <li class="short-url"> <a href=<%= "/url/" + url.short_url %>> <%= url.short_url %> </a></li>
+        <li class="click-count"> <%= url.click_count %> </li>
+      </ul></div><br>
+    <% end %>
+    <%= false %>
   <% end %>
 </div>

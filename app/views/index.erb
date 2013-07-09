@@ -16,11 +16,11 @@
   </form>
   <p>Short URL's</p>
   <% @urls.each do |url| %>
-  <div class="url">
-  <ul>
-    <li class="full-url"> <%= url.full_url %> </li>
-    <li class="short-url"> <a href=<%= "/url/" + url.short_url %>> <%= 'shorturl.pw/' + url.short_url %> </a></li>
-    <li class="click-count"> <%= url.click_count %> </li>
-  </ul></div><br>
+    <div class="url">
+      <ul>
+        <li class="full-url"> <%= url.full_url %> </li>
+        <li class="short-url"> <a href=<%= "/url/" + url.short_url %>> <%= 'shorturl.pw/' + url.short_url %> </a></li>
+        <li class="click-count"> <%= url.click_count %> </li>
+      </ul></div><br>
   <% end %>
 </div>
