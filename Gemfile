@@ -14,8 +14,10 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
-
+gem 'debugger'
 gem 'shotgun'
+
+gem 'haml'
 
 group :test do
   gem 'faker'

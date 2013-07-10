@@ -1,0 +1,22 @@
+#user-login-signup
+  %form{:action => "/signin", :method => "get"}
+    %button{:type => "submit"} Sign In
+  %form{:action => "/signup", :method => "get"}
+    %button{:type => "submit"} Sign Up
+
+
+.container
+  %form{:action => "/urls", :method => "post"}
+    %p Full URL
+    %input{:type => "text", :name => "full_url"}
+    %button{:type => "submit"} Generate!
+  %p Short URL's
+  - @urls.each do |url|
+    .url
+      %ul
+        %li.full-url= url.full_url
+        %li.short-url
+          %a{:href => "/url/#{url.short_url}"}= "shorturl.pw/#{url.short_url}"
+        %li.click-count= url.click_count
+  %br
+

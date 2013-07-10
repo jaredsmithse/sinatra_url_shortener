@@ -19,11 +19,11 @@ end
 
 
 get '/signup' do 
-  erb :signup
+  haml :signup
 end
 
 get '/signin' do
-  erb :signin
+  haml :signin
 end
 
 
@@ -32,7 +32,7 @@ get '/user_home' do
   if logged_in?
     @urls = Url.all 
     current_user
-    erb :user_home
+    haml :user_home
   else
     redirect '/'
   end

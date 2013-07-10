@@ -1,0 +1,19 @@
+.container
+  %h1= "Welcome #{@current_user.first_name}!"
+  %form{:action => "/urls", :method => "post"}
+    %p Full URL
+    %input{:type => "text", :name => "full_url"}
+    %button{:type => "submit"} Generate!
+  
+  %pShort URL's
+  - @urls.each do |url|
+    - if @current_user.id == url.user_id
+      .url
+        %ul
+        %li.full-url= url.full_url  
+        %li.short-url 
+          %a{:href => "/url/#{url.short_url}"}= url.short_url 
+        %li.click-count= url.click_count  
+      %br
+    
+  

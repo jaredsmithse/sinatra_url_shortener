@@ -1,0 +1,19 @@
+.container
+  %h1 Welcome back!
+  
+  %br
+  %br
+  
+  %form{:action => "/signin", :method => "post"}
+    %h3 Sign In :
+    %span Email
+    %br
+    %input{:type => "text", :name => "sign_in[email]"}
+    %br
+    %span Password
+    %br
+    %input{:type => "password", :name => "sign_in[password_hash]"}>
+    %br
+    %button{:type => "submit"} Sign In 
+  
+

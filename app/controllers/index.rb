@@ -1,6 +1,6 @@
 get '/' do
   @urls = Url.all
-  erb :index
+  haml :index
 end
 
 post '/urls' do

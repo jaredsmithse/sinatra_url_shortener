@@ -4,6 +4,6 @@ get '/' do
   if logged_in?
     redirect '/user_home'
   else
-    erb :index
+    haml :index
   end
 end

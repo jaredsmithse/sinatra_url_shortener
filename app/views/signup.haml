@@ -1,0 +1,22 @@
+.container
+  %h1 Enter all your secrets!
+  
+  %br
+  %br
+  
+  %form{:action => "/signup", :method => "post"}
+
+    %input{:type => "text", :name => "sign_up[first_name]", :placeholder => "name"}
+    %br
+    %br
+
+    %input{:type => "password", :name => "sign_up[password_hash]", :placeholder => "password"}
+    %br
+    %br
+    
+    %input{:type => "text", :name => "sign_up[email]", :placeholder => "email"}
+    %br
+    %br
+    
+    %button{:type => "submit"} Sign Up
+  

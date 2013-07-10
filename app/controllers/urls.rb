@@ -1,4 +1,4 @@
- 
+require 'debugger' 
 post '/urls' do
   args = generate_short_url(params)
   args[:user_id] = current_user.id rescue nil
